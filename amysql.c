@@ -1654,7 +1654,7 @@ inline static PyObject *Con_PacketRecv(Con *self, bool skipCols) {
 				default:
 					fprintf(stderr,"Exception call:%s (%s:%l) :\n",(char *)__FUNCTION__, (char *)__FILE__, (long)__LINE__);
 					fprintf(stderr,"Error decoding field: TYPE: %02x  CHRS: %02x  FLAG: %02x  NAME: %s\n", col->type, col->charset, col->flags, PyString_AsString(col->name));
-					return;
+					return NULL;
 				}
 				break;
 
